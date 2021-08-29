@@ -1,5 +1,5 @@
 Logical:        Human
-Title:          "Human Being"
+Title:          "Human Being TEST"
 Description:    "A member of the Homo sapien species."
 * name 0..* SU HumanName "Name(s) of the human" "The names by which the human is or has been known"
 * birthDate 0..1 SU dateTime "The date of birth, if known" "The date on which the person was born. Approximations may be used if exact date is unknown."
