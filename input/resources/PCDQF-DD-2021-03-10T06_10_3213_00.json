@@ -1,37 +1,22 @@
 {
     "resourceType": "StructureDefinition",
-    "extension": [
-        {
-            "url": "http://clinfhir.com/StructureDefinition/userEmail",
-            "valueString": "david.hay25@gmail.com"
-        }
-    ],
+   
     "id": "PCDQF-DD",
     "url": "http://home.clinfhir.com:8030/baseDstu3/StructureDefinition/PCDQF-DD",
     "name": "PCDQF-DD",
     "title": "PCDQD data dictionary",
-    "purpose": "PCDQF-DD",
+    "description": "PCDQF-DD",
+    "fhirVersion": "4.0.1",
     "publisher": "CSIRO AeHRC",
     "status": "draft",
     "date": "2021-03-10T06:10:32+13:00",
-    "identifier": [
-        {
-            "system": "http://clinfhir.com",
-            "value": "author"
-        }
-    ],
-    "keyword": [
-        {
-            "system": "http://fhir.hl7.org.nz/NamingSystem/application",
-            "code": "clinfhir"
-        }
-    ],
+    
     "kind": "logical",
     "abstract": false,
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
-    "type": "PCDQF-DD",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+    "type": "http://example.org/fhir/fish/StructureDefinition/PCDQF-DD",
     "derivation": "specialization",
-    "snapshot": {
+    "differential": {
         "element": [
             {
                 "label": "PCDQF-DD",
@@ -40,17 +25,7 @@
                 "definition": "No description",
                 "min": 1,
                 "max": "1",
-                "base": {
-                    "path": "PCDQF-DD",
-                    "min": 0,
-                    "max": "1"
-                },
-                "extension": [
-                    {
-                        "url": "http://clinfhir.com/fhir/StructureDefinition/edStatus",
-                        "valueString": "included"
-                    }
-                ]
+                      
             },
             {
                 "label": "Release1",
