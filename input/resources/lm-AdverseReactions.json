@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "lm-adversereactions",
-  "url": "http://aehrc.com/fhir/StructureDefinition/AdverseReactions",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-adversereactions",
   "name": "AdverseReactions",
   "title": "AdverseReactions",
   "status": "active",
