@@ -1,0 +1,497 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-socialcontextr2",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-socialcontextr2",
+  "name": "SocialContextR2",
+  "title": "SocialContextR2",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "SocialContext",
+        "path": "SocialContextR2",
+        "label": "SocialContextR2",
+        "short": "Social context R2",
+        "definition": "Most systems allow various aspects of social history to be captured but the data is extremely variable, inconsistent, and almost universally an unstructured narrative. In Release 2 the Data Dictionary contains data elements that support a pragmatic start point for recording structured data that will support provision of clinical care, drive clinical decision support or identify risks related to social determinants of health.",
+        "comment": "PREFACE:\nMost systems allow various aspects of social history to be captured but the data is extremely\nvariable, inconsistent, and almost universally an unstructured narrative. In Release 2 the Data Dictionary contains data elements that support a pragmatic start point for recording structured data that will support provision of clinical care, drive clinical decision support or identify risks related to social determinants of health.\nContains:\n- Social summary item (R1)\n- Housing summary item\n--- Housing record item\n- Occupation summary item\n- Education summary item",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContext.HousingSummaryItem",
+        "path": "SocialContextR2.HousingSummaryItem",
+        "label": "HousingSummaryItem",
+        "short": "Housing summary item",
+        "definition": "Summary or persistent information about an individual's housing situation.",
+        "comment": "PREFACE: This clinical model is the first iteration of a more detailed record about housing. The ‘Housing summary item’ will provide a overview of all housing related information, comprising a narrative description only in Release 2. \n\nIn the future, this model can be extended with more detailed data elements, including ‘Residential setting’ (including public place/temporary shelter) and ‘Housing security’ to support clinical data collections related to SDOH.",
+        "alias": [
+          "Accommodation"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.HousingSummaryItem.OverallDescription",
+        "path": "SocialContextR2.HousingSummaryItem.OverallDescription",
+        "label": "OverallDescription",
+        "short": "Overall description",
+        "definition": "Narrative description about the overall housing situation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "SocialContextR2.HousingSummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this housing summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContext.LivingArrangementSummaryItem",
+        "path": "SocialContextR2.LivingArrangementSummaryItem",
+        "label": "LivingArrangementSummaryItem",
+        "short": "Living arrangement summary item",
+        "definition": "Summary and persistent information about the circumstances about an individual living alone or with others.",
+        "alias": [
+          "Household"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.LivingArrangementSummaryItem.OverallDescription",
+        "path": "SocialContextR2.LivingArrangementSummaryItem.OverallDescription",
+        "label": "OverallDescription",
+        "short": "Overall description",
+        "definition": "Narrative description about the living arrangement for the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "SocialContextR2.LivingArrangementSummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this living arrangement summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContext.SocialNetworkSummaryItem",
+        "path": "SocialContextR2.SupportNetworkSummaryItem",
+        "label": "SupportNetworkSummaryItem",
+        "short": "Support network summary item",
+        "definition": "Persistent or summary information about the support and social network for an individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.SupportNetworkSummaryItem.OverallDescription",
+        "path": "SocialContextR2.SupportNetworkSummaryItem.OverallDescription",
+        "label": "OverallDescription",
+        "short": "Overall description",
+        "definition": "Narrative description about the support and social network for an individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "SocialContextR2.SupportNetworkSummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this support network summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContext.EducationSummaryItem",
+        "path": "SocialContextR2.EducationSummaryItem",
+        "label": "EducationSummaryItem",
+        "short": "Education summary item",
+        "definition": "Summary or persistent information about an individual's current and past education or training.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.EducationSummaryItem.OverallDescription",
+        "path": "SocialContextR2.EducationSummaryItem.OverallDescription",
+        "label": "OverallDescription",
+        "short": "Overall description",
+        "definition": "Narrative description about the overall education or training history.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.EducationSummaryItem.HighestLevelCompleted",
+        "path": "SocialContextR2.EducationSummaryItem.HighestLevelCompleted",
+        "label": "HighestLevelCompleted",
+        "short": "Highest level completed",
+        "definition": "Description of highest category of education or training completed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "SocialContextR2.EducationSummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this education summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContext.OccupationSummaryItem",
+        "path": "SocialContextR2.OccupationSummaryItem",
+        "label": "OccupationSummaryItem",
+        "short": "Occupation summary item",
+        "definition": "Summary or persistent information about an individual's current and past jobs and/or roles.",
+        "alias": [
+          "Employment",
+          "Study",
+          "Caring",
+          "Retirement"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationSummaryItem.OverallDescription",
+        "path": "SocialContextR2.OccupationSummaryItem.OverallDescription",
+        "label": "OverallDescription",
+        "short": "Overall description",
+        "definition": "Narrative description about the overall occupation situation for the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationSummaryItem.EmploymentStatus",
+        "path": "SocialContextR2.OccupationSummaryItem.EmploymentStatus",
+        "label": "EmploymentStatus",
+        "short": "Employment status",
+        "definition": "Statement about the individual's current employment.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationSummaryItem.[OccupationEpisode]",
+        "path": "SocialContextR2.OccupationSummaryItem.[OccupationEpisode]",
+        "label": "[OccupationEpisode]",
+        "short": "[OccupationEpisode]",
+        "definition": "Specific structured details about one or more occupation episodes.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "SocialContextR2.OccupationSummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this occupation summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationEpisodeItem",
+        "path": "SocialContextR2.OccupationEpisodeItem",
+        "label": "OccupationEpisodeItem",
+        "short": "Occupation episode item",
+        "definition": "Details about a single job or role carried out by an individual during a specified period of time.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationEpisodeItem.JobTitle",
+        "path": "SocialContextR2.OccupationEpisodeItem.Occupation",
+        "label": "Occupation",
+        "short": "Occupation",
+        "definition": "The main role of the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationEpisodeItem.JobTitle",
+        "path": "SocialContextR2.OccupationEpisodeItem.JobTitle",
+        "label": "JobTitle",
+        "short": "Job title/role",
+        "definition": "Name of the main job title held by the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationEpisodeItem.Description",
+        "path": "SocialContextR2.OccupationEpisodeItem.Description",
+        "label": "Description",
+        "short": "Description",
+        "definition": "Narrative description about the job or role carried out by the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationEpisodeItem.DateCommenced",
+        "path": "SocialContextR2.OccupationEpisodeItem.DateCommenced",
+        "label": "DateCommenced",
+        "short": "Date commenced",
+        "definition": "The date when an individual started the job or role.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.OccupationEpisodeItem.DateCeased",
+        "path": "SocialContextR2.OccupationEpisodeItem.DateCeased",
+        "label": "DateCeased",
+        "short": "Date ceased",
+        "definition": "The date when an individual stopped the job or role.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContext.TransportationAccessSummaryItem",
+        "path": "SocialContextR2.TransportationAccessSummaryItem",
+        "label": "TransportationAccessSummaryItem",
+        "short": "Transportation access summary item",
+        "definition": "Summary or persistent information about an individual's access, including barriers or difficulties in access, to transportation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.TransportationAccessSummaryItem.OverallDescription",
+        "path": "SocialContextR2.TransportationAccessSummaryItem.OverallDescription",
+        "label": "OverallDescription",
+        "short": "Overall description",
+        "definition": "Narrative description about the overall transportation access and availability for the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "SocialContextR2.TransportationAccessSummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this transportation access summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContext.PersonalSafetySummaryItem",
+        "path": "SocialContextR2.PersonalSafetySummaryItem",
+        "label": "PersonalSafetySummaryItem",
+        "short": "Personal safety summary item",
+        "definition": "Summary or persistent information about an individual's perception about their personal safety.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "SocialContextR2.PersonalSafetySummaryItem.OverallDescription",
+        "path": "SocialContextR2.PersonalSafetySummaryItem.OverallDescription",
+        "label": "OverallDescription",
+        "short": "Overall description",
+        "definition": "Narrative description about the personal safety situation for the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "SocialContextR2.PersonalSafetySummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this personal safety summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

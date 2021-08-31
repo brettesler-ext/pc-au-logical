@@ -1,0 +1,171 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-compositions",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-compositions",
+  "name": "Compositions",
+  "title": "Compositions",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Containers",
+        "path": "Compositions",
+        "label": "Compositions",
+        "short": "Compositions",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Encounter.EncounterItem",
+        "path": "Compositions.EncounterItem",
+        "label": "EncounterItem",
+        "short": "Encounter item",
+        "definition": "Detailed information about a single clinical interaction, visit or care event between an individual and one or more healthcare providers.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Encounter.TypeEncounter",
+        "path": "Compositions.EncounterItem.ModeParticipation",
+        "label": "ModeParticipation",
+        "short": "Mode of participation",
+        "definition": "The manner in which a clinical care activity, interaction or visit event was carried out.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionList",
+        "path": "Compositions.AdverseReactionRiskListItem",
+        "label": "AdverseReactionRiskListItem",
+        "short": "Adverse reaction risk list item",
+        "definition": "A list of substances which, on administration or during exposure, may put the individual at risk of an adverse reaction.",
+        "alias": [
+          "Allergy list",
+          "Allergy/intolerance list"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ProblemList.ProblemListItem",
+        "path": "Compositions.ProblemListItem",
+        "label": "ProblemListItem",
+        "short": "Problem list item",
+        "definition": "A combined representation of significant problems, diagnoses and procedures for the individual.",
+        "alias": [
+          "Medical history",
+          "Problem/Diagnosis list",
+          "Procedure list"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicines.MedicinesList",
+        "path": "Compositions.MedicationListItem",
+        "label": "MedicationListItem",
+        "short": "Medication list item",
+        "definition": "A list of medications being used by the individual.",
+        "alias": [
+          "Medicines list"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Compositions.VaccinationList",
+        "path": "Compositions.VaccinationListItem",
+        "label": "VaccinationListItem",
+        "short": "Vaccination list item",
+        "definition": "A list of vaccines that have been administered to an individual.",
+        "alias": [
+          "Immunisation list"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Compositions.FamilyHistoryList",
+        "path": "Compositions.FamilyHistoryListItem",
+        "label": "FamilyHistoryListItem",
+        "short": "Family history list item",
+        "definition": "A list of significant health and related issues in family members.",
+        "alias": [
+          "Immunisation list"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Compositions.FamilyHistoryList",
+        "path": "Compositions.CarePlanItem",
+        "label": "CarePlanItem",
+        "short": "Care plan item",
+        "definition": "A collection of planned, active or completed activities or orders, goals/objectives and targets.",
+        "alias": [
+          "Follow-up list"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

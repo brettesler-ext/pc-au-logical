@@ -1,0 +1,159 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-vaccinations",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-vaccinations",
+  "name": "Vaccinations",
+  "title": "Vaccinations",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Vaccinations",
+        "path": "Vaccinations",
+        "label": "Vaccinations",
+        "short": "Vaccinations",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Vaccinations.VaccinationItem",
+        "path": "Vaccinations.VaccinationItem",
+        "label": "VaccinationItem",
+        "short": "Vaccination item",
+        "definition": "A vaccine that has been administered to an individual.",
+        "alias": [
+          "Immunisation"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Vaccination.VaccinationItem.VaccineName",
+        "path": "Vaccinations.VaccinationItem.VaccineName",
+        "label": "VaccineName",
+        "short": "Vaccine name",
+        "definition": "Identification of the vaccine, by name",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Vaccination.VaccinationItem.VaccineSequence",
+        "path": "Vaccinations.VaccinationItem.VaccineSequence",
+        "label": "VaccineSequence",
+        "short": "Sequence",
+        "definition": "The sequence of administration, in the context of a series of vaccinations.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Vaccination.VaccinationItem.DateAdministered",
+        "path": "Vaccinations.VaccinationItem.DateAdministered",
+        "label": "DateAdministered",
+        "short": "Date administered",
+        "definition": "The data when the vaccine was administered.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Vaccinations.VaccinationItem.BatchIdentifier",
+        "path": "Vaccinations.VaccinationItem.BatchIdentifier",
+        "label": "BatchIdentifier",
+        "short": "Batch identifier",
+        "definition": "The identifier assigned to the production batch by the manufacturer.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem.Comment",
+        "path": "Vaccinations.VaccinationItem.Comment",
+        "label": "Comment",
+        "short": "Comment",
+        "definition": "Additional narrative about the vaccination not captured in other fields.",
+        "alias": [
+          "Note"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicationAbsenceItem",
+        "path": "Vaccinations.VaccinationAbsenceItemR1",
+        "label": "VaccinationAbsenceItemR1",
+        "short": "Vaccination absence item R1",
+        "definition": "An overall statement of absence of information about past administration of vaccinations, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicationAbsenceItem.MedicationAbsenceStatement",
+        "path": "Vaccinations.VaccinationAbsenceItemR1.VaccinationAbsenceStatement",
+        "label": "VaccinationAbsenceStatement",
+        "short": "Vaccination absence statement",
+        "definition": "Positive statement that no information is available about previous administration of any vaccinations.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

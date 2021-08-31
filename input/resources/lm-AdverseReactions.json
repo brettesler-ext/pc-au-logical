@@ -1,227 +1,233 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "lm-adversereactions",
-    "url": "http://aehrc.com/fhir/StructureDefinition/lm-adversereactions",
-    "name": "AdverseReactions",
-    "title": "Adverse Reactions",
-    "status": "active",
-    "description": "Adverse reactions",
-    "fhirVersion": "4.0.1",
-    "kind": "logical",
-  "abstract": false,
-  "type": "http://example.org/fhir/fish/StructureDefinition/AdverseReactions",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "resourceType": "StructureDefinition",
+  "id": "lm-adversereactions",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-adversereactions",
+  "name": "AdverseReactions",
+  "title": "AdverseReactions",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
   "derivation": "specialization",
-    "differential": {
-        "element": [
-            {
-                "id": "AdverseReactions",
-                "path": "AdverseReactions",
-                "short": "AdverseReactions"
-              },
-            {
-                "id": "AdverseReactions.AdverseReactionRiskItem",
-                "path": "AdverseReactions.AdverseReactionRiskItem",
-                "label": "AdverseReactionRiskItem",
-                "short": "Adverse reaction risk item",
-                "definition": "Risk of harmful or undesirable physiological response which is unique to the individual and associated with exposure to a known substance.",
-                "alias": [
-                    "Allergy",
-                    "Intolerance",
-                    "Hypersensitivity"
-                ],
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Heading"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "AdverseReactions.AdverseReactionRiskItem.SubstanceName",
-                "path": "AdverseReactions.AdverseReactionRiskItem.SubstanceName",
-                "label": "SubstanceName",
-                "short": "Substance name",
-                "definition": "Identification of a substance, or substance class, which is considered to put the individual at risk of an adverse reaction event.",
-                "alias": [
-                    "Agent",
-                    "Class",
-                    "Product"
-                ],
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "AdverseReactions.AdverseReactionRiskItem.Criticality",
-                "path": "AdverseReactions.AdverseReactionRiskItem.Criticality",
-                "label": "Criticality",
-                "short": "Criticality",
-                "definition": "Estimate of the potential clinical harm, or seriousness, from a future exposure to the identified substance.",
-                "alias": [
-                    "Seriousness"
-                ],
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
-                "path": "AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
-                "label": "VerificationStatus",
-                "short": "Verification status",
-                "definition": "Assertion about certainty associated about the potential risk of a reaction to the identified substance.",
-                "alias": [
-                    "Certainty"
-                ],
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "AdverseReactions.AdverseReactionRiskItem.Reaction",
-                "path": "AdverseReactions.AdverseReactionRiskItem.ReactionEvent",
-                "label": "ReactionEvent",
-                "short": "Reaction event",
-                "definition": "Details about each adverse reaction event linked to exposure to the identified 'Substance'.",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Heading"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Manifestation",
-                "path": "AdverseReactions.AdverseReactionRiskItem.ReactionEvent.Manifestation",
-                "label": "Manifestation",
-                "short": "Manifestation",
-                "definition": "Clinical symptom and/or sign that were observed or associated with the adverse reaction.",
-                "alias": [
-                    "clinical manifestation",
-                    "nature of reaction"
-                ],
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "AdverseReactions.AdverseReactionRiskItem.Comment",
-                "path": "AdverseReactions.AdverseReactionRiskItem.Comment",
-                "label": "Comment",
-                "short": "Comment",
-                "definition": "Additional narrative about the adverse reaction risk not captured in other fields.",
-                "alias": [
-                    "Note"
-                ],
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
-                "path": "AdverseReactions.AdverseReactionRiskItem.LastUpdated",
-                "label": "LastUpdated",
-                "short": "Last updated",
-                "definition": "The date this adverse reaction summary was last updated.",
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "dateTime"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Medicines.MedicineExclusionItem",
-                "path": "AdverseReactions.AdverseReactionRiskExclusionItemR1",
-                "label": "AdverseReactionRiskExclusionItemR1",
-                "short": "Adverse reaction risk exclusion item R1",
-                "definition": "A positive statement about no known adverse reactions, accurate only at the time of recording.",
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Heading"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Medicine.MedicineExclusionItem.MedicationExclusionStatement",
-                "path": "AdverseReactions.AdverseReactionRiskExclusionItemR1.AdverseReactionRiskExclusionStatement",
-                "label": "AdverseReactionRiskExclusionStatement",
-                "short": "Adverse reaction risk exclusion statement",
-                "definition": "Positive statement that there are no known adverse reactions for inclusion.",
-                "min": 1,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Medicine.AdverseReactionRiskAbsenceItem",
-                "path": "AdverseReactions.AdverseReactionRiskAbsenceItemR1",
-                "label": "AdverseReactionRiskAbsenceItemR1",
-                "short": "Adverse reaction risk absence item R1",
-                "definition": "A positive statement of absence of information about known adverse reaction risks, accurate only at the time of recording.",
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Heading"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Medicine.AdverseReactionRiskAbsenceItem.AdverseReactionRiskAbsenceStatement",
-                "path": "AdverseReactions.AdverseReactionRiskAbsenceItemR1.AdverseReactionRiskAbsenceStatement",
-                "label": "AdverseReactionRiskAbsenceStatement",
-                "short": "Adverse reaction risk absence statement",
-                "definition": "Positive statement that no information is available about adverse reaction risks.",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": false
-            }
-        ]
-    }
+  "differential": {
+    "element": [
+      {
+        "id": "AdverseReactions",
+        "path": "AdverseReactions",
+        "label": "AdverseReactions",
+        "short": "Adverse reactions",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem",
+        "path": "AdverseReactions.AdverseReactionRiskItem",
+        "label": "AdverseReactionRiskItem",
+        "short": "Adverse reaction risk item",
+        "definition": "Risk of harmful or undesirable physiological response which is unique to the individual and associated with exposure to a known substance.",
+        "alias": [
+          "Allergy",
+          "Intolerance",
+          "Hypersensitivity"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem.SubstanceName",
+        "path": "AdverseReactions.AdverseReactionRiskItem.SubstanceName",
+        "label": "SubstanceName",
+        "short": "Substance name",
+        "definition": "Identification of a substance, or substance class, which is considered to put the individual at risk of an adverse reaction event.",
+        "alias": [
+          "Agent",
+          "Class",
+          "Product"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem.Criticality",
+        "path": "AdverseReactions.AdverseReactionRiskItem.Criticality",
+        "label": "Criticality",
+        "short": "Criticality",
+        "definition": "Estimate of the potential clinical harm, or seriousness, from a future exposure to the identified substance.",
+        "alias": [
+          "Seriousness"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
+        "path": "AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
+        "label": "VerificationStatus",
+        "short": "Verification status",
+        "definition": "Assertion about certainty associated about the potential risk of a reaction to the identified substance.",
+        "alias": [
+          "Certainty"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem.Reaction",
+        "path": "AdverseReactions.AdverseReactionRiskItem.ReactionEvent",
+        "label": "ReactionEvent",
+        "short": "Reaction event",
+        "definition": "Details about each adverse reaction event linked to exposure to the identified 'Substance'.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Manifestation",
+        "path": "AdverseReactions.AdverseReactionRiskItem.ReactionEvent.Manifestation",
+        "label": "Manifestation",
+        "short": "Manifestation",
+        "definition": "Clinical symptom and/or sign that were observed or associated with the adverse reaction.",
+        "alias": [
+          "clinical manifestation",
+          "nature of reaction"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem.Comment",
+        "path": "AdverseReactions.AdverseReactionRiskItem.Comment",
+        "label": "Comment",
+        "short": "Comment",
+        "definition": "Additional narrative about the adverse reaction risk not captured in other fields.",
+        "alias": [
+          "Note"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "AdverseReactions.AdverseReactionRiskItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this adverse reaction summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicines.MedicineExclusionItem",
+        "path": "AdverseReactions.AdverseReactionRiskExclusionItemR1",
+        "label": "AdverseReactionRiskExclusionItemR1",
+        "short": "Adverse reaction risk exclusion item R1",
+        "definition": "A positive statement about no known adverse reactions, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineExclusionItem.MedicationExclusionStatement",
+        "path": "AdverseReactions.AdverseReactionRiskExclusionItemR1.AdverseReactionRiskExclusionStatement",
+        "label": "AdverseReactionRiskExclusionStatement",
+        "short": "Adverse reaction risk exclusion statement",
+        "definition": "Positive statement that there are no known adverse reactions for inclusion.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.AdverseReactionRiskAbsenceItem",
+        "path": "AdverseReactions.AdverseReactionRiskAbsenceItemR1",
+        "label": "AdverseReactionRiskAbsenceItemR1",
+        "short": "Adverse reaction risk absence item R1",
+        "definition": "A positive statement of absence of information about known adverse reaction risks, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.AdverseReactionRiskAbsenceItem.AdverseReactionRiskAbsenceStatement",
+        "path": "AdverseReactions.AdverseReactionRiskAbsenceItemR1.AdverseReactionRiskAbsenceStatement",
+        "label": "AdverseReactionRiskAbsenceStatement",
+        "short": "Adverse reaction risk absence statement",
+        "definition": "Positive statement that no information is available about adverse reaction risks.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
 }

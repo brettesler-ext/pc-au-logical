@@ -1,0 +1,273 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-problem-diagnosis",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-problem/diagnosis",
+  "name": "Problem-Diagnosis",
+  "title": "Problem-Diagnosis",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ProblemList",
+        "path": "Problem/Diagnosis",
+        "label": "Problem/Diagnosis",
+        "short": "Problem/Diagnosis",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ProblemList.ProblemDiagnosisItem",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem",
+        "label": "ProblemDiagnosisItem",
+        "short": "Problem/Diagnosis item",
+        "definition": "Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.",
+        "alias": [
+          "Condition"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.ProblemDiagnosisName",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.ProblemDiagnosisName",
+        "label": "ProblemDiagnosisName",
+        "short": "Problem/diagnosis name",
+        "definition": "Identification of the problem or diagnosis, by name.",
+        "alias": [
+          "Condition name"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.ClinicalDescription",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.ClinicalDescription",
+        "label": "ClinicalDescription",
+        "short": "Clinical description",
+        "definition": "Narrative description about the problem or diagnosis.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.Severity",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.Severity",
+        "label": "Severity",
+        "short": "Severity",
+        "definition": "An assessment of the overall severity of the problem or diagnosis.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.BodySite",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.BodySite",
+        "label": "BodySite",
+        "short": "Body site",
+        "definition": "Identification of a simple or precoordinated body site for the location of the problem or diagnosis.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.[AnatomicalLocationItem]",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.[AnatomicalLocationItem]",
+        "label": "[AnatomicalLocationItem]",
+        "short": "[Anatomical location item]",
+        "definition": "Specific structured details about a single anatomical location.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.DateClinicallyRecognised",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.DateClinicallyRecognised",
+        "label": "DateClinicallyRecognised",
+        "short": "Date clinically recognised",
+        "definition": "Estimated or actual date/time the diagnosis or problem was recognised by a healthcare professional.",
+        "alias": [
+          "Date of diagnosis"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisQualifierItem.ActiveInactiveStatus",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.ActiveInactiveStatus",
+        "label": "ActiveInactiveStatus",
+        "short": "Active/inactive status",
+        "definition": "The activity or clinical impact of the problem or diagnosis on the individual.",
+        "alias": [
+          "Clinical status"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.Course",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.CourseDescription",
+        "label": "CourseDescription",
+        "short": "Course description",
+        "definition": "Narrative description about the course of the problem or diagnosis since onset.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Problem/Diagnosis.ProblemDiagnosisItem.Comment2",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.Comment",
+        "label": "Comment",
+        "short": "Comment",
+        "definition": "Additional narrative about the problem or diagnosis not captured in other fields.",
+        "alias": [
+          "Note"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "Problem/Diagnosis.ProblemDiagnosisItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this problem or diagnosis was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicines.MedicineExclusionItem",
+        "path": "Problem/Diagnosis.ProblemDiagnosisExclusionItemR1",
+        "label": "ProblemDiagnosisExclusionItemR1",
+        "short": "Problem/Diagnosis exclusion item R1",
+        "definition": "A positive statement about no known problems or diagnoses, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineExclusionItem.MedicationExclusionStatement",
+        "path": "Problem/Diagnosis.ProblemDiagnosisExclusionItemR1.ProblemDiagnosisExclusionStatement",
+        "label": "ProblemDiagnosisExclusionStatement",
+        "short": "Problem/Diagnosis exclusion statement",
+        "definition": "Positive statement that there are no known problems or diagnoses for inclusion.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.ProblemDiagnosisAbsenceItem",
+        "path": "Problem/Diagnosis.ProblemDiagnosisAbsenceItemR1",
+        "label": "ProblemDiagnosisAbsenceItemR1",
+        "short": "Problem/Diagnosis absence item R1",
+        "definition": "A positive statement of absence of information about known problems or diagnoses, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.ProblemDiagnosisAbsenceItem.ProblemDiagnosisAbsenceStatement",
+        "path": "Problem/Diagnosis.ProblemDiagnosisAbsenceItemR1.ProblemDiagnosisAbsenceStatement",
+        "label": "ProblemDiagnosisAbsenceStatement",
+        "short": "Problem/Diagnosis absence statement",
+        "definition": "Positive statement that no information is available about problems or diagnoses.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

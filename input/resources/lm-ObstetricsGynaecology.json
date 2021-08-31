@@ -1,0 +1,262 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-obstetricsgynaecology",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-obstetricsgynaecology",
+  "name": "ObstetricsGynaecology",
+  "title": "ObstetricsGynaecology",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "WomensHealth",
+        "path": "ObstetricsGynaecology",
+        "label": "ObstetricsGynaecology",
+        "short": "Obstetrics & Gynaecology",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "WomensHealth.BreastfeedingSummaryItem",
+        "path": "ObstetricsGynaecology.BreastfeedingSummaryItem",
+        "label": "BreastfeedingSummaryItem",
+        "short": "Breastfeeding summary item",
+        "definition": "Summary or persistent information about current or past breastfeeding activity by an individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ObstetricsGynaecology.BreastfeedingSummaryItem.StatusBreastfeeding",
+        "path": "ObstetricsGynaecology.BreastfeedingSummaryItem.Status",
+        "label": "Status",
+        "short": "Status",
+        "definition": "Statement about current breastfeeding status for the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "AdverseReactions.AdverseReactionRiskItem.Comment",
+        "path": "ObstetricsGynaecology.BreastfeedingSummaryItem.Comment",
+        "label": "Comment",
+        "short": "Comment",
+        "definition": "Additional narrative about the breastfeeding not captured in other fields.",
+        "alias": [
+          "Note"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "ObstetricsGynaecology.BreastfeedingSummaryItem.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this tobacco breastfeeding summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "WomensHealth.ObstetricsSummaryItem",
+        "path": "ObstetricsGynaecology.ObstetricSummaryItem",
+        "label": "ObstetricSummaryItem",
+        "short": "Obstetric summary item",
+        "definition": "Summary or persistent information about the numbers of key obstetric events.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ObstetricsGynaecology.ObstetricsSummaryItem.Gravidity",
+        "path": "ObstetricsGynaecology.ObstetricSummaryItem.Gravidity",
+        "label": "Gravidity",
+        "short": "Gravidity",
+        "definition": "Number of times a woman has been pregnant, current and past, regardless of the pregnancy outcome.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ObstetricsGynaecology.ObstetricsSummaryItem.Parity",
+        "path": "ObstetricsGynaecology.ObstetricSummaryItem.Parity",
+        "label": "Parity",
+        "short": "Parity",
+        "definition": "The number of pregnancies that have resulted in a live birth or a stillbirth.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "WomensHealth.EstimatedDateDelivery",
+        "path": "ObstetricsGynaecology.EstimatedDateDeliveryItem",
+        "label": "EstimatedDateDeliveryItem",
+        "short": "Estimated date of delivery item",
+        "definition": "Estimated date of delivery for a pregnancy, calculated or estimated by a variety of methods.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "***WomensHealth.EstimatedDateDeliveryItem.ByCycle",
+        "path": "ObstetricsGynaecology.EstimatedDateDeliveryItem.ByCycle",
+        "label": "ByCycle",
+        "short": "EDD by menstrual cycle",
+        "definition": "The EDD estimated from an LNMP and characteristics of the menstrual cycle.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "***WomensHealth.EstimatedDateDeliveryItem.ByCycle",
+        "path": "ObstetricsGynaecology.EstimatedDateDeliveryItem.ByUltrasound",
+        "label": "ByUltrasound",
+        "short": "By ultrasound scan",
+        "definition": "Details about an EDD estimated from the findings on a pregnancy ultrasound.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ObstetricsGynaecology.EstimatedDateDeliveryItem.ByUltrasound.ScanDate",
+        "path": "ObstetricsGynaecology.EstimatedDateDeliveryItem.ByUltrasound.ScanDate",
+        "label": "ScanDate",
+        "short": "Date of ultrasound scan",
+        "definition": "The date on which the ultrasound was carried out.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ObstetricsGynaecology.EstimatedDateDeliveryItem.ByUltrasound.GestationByScan",
+        "path": "ObstetricsGynaecology.EstimatedDateDeliveryItem.ByUltrasound.GestationByScan",
+        "label": "GestationByScan",
+        "short": "Gestation by scan",
+        "definition": "The gestation estimated from the scan.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Duration"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "***WomensHealth.EstimatedDateDeliveryItem.EDDByUltrasound",
+        "path": "ObstetricsGynaecology.EstimatedDateDeliveryItem.ByUltrasound.EDDByUltrasound",
+        "label": "EDDByUltrasound",
+        "short": "Estimated date by ultrasound",
+        "definition": "EDD estimated from the findings on a pregnancy ultrasound.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ObstetricsGynaecology.MenstruationItem",
+        "path": "ObstetricsGynaecology.MenstruationItem",
+        "label": "MenstruationItem",
+        "short": "Menstruation",
+        "definition": "Details about menstrual bleeding and associated symptoms within a specified single cycle or specified group of cycles.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "ObstetricsGynaecology.MenstruationItem.LNMP",
+        "path": "ObstetricsGynaecology.MenstruationItem.LNMP",
+        "label": "LNMP",
+        "short": "Last normal menstrual period (LNMP)",
+        "definition": "First day of menstrual bleeding in the most recent typical menstrual cycle experienced by the individual.",
+        "alias": [
+          "LNMP",
+          "LMP"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

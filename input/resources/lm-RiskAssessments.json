@@ -1,0 +1,91 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-riskassessments",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-riskassessments",
+  "name": "RiskAssessments",
+  "title": "RiskAssessments",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthRiskAssessments",
+        "path": "RiskAssessments",
+        "label": "RiskAssessments",
+        "short": "Risk assessments",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "HealthRiskAssessments.AbsoluteCVDRisk",
+        "path": "RiskAssessments.AbsoluteCVDRiskItem",
+        "label": "AbsoluteCVDRiskItem",
+        "short": "Absolute cardiovascular risk calculator item",
+        "definition": "An assessment tool used to calculate the absolute cardiovascular disease risk (CVD) in the next 5 years.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "RiskAssessments.AbsoluteCVDRiskItem.TotalRiskScore",
+        "path": "RiskAssessments.AbsoluteCVDRiskItem.TotalRiskScore",
+        "label": "TotalRiskScore",
+        "short": "Total risk score",
+        "definition": "The total risk score calculated from all component scores.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "HealthRiskAssessments.AUDITItem",
+        "path": "RiskAssessments.AUDITItem",
+        "label": "AUDITItem",
+        "short": "Alcohol use disorders identification test item",
+        "definition": "Ten question screening test to identify harmful alcohol consumption.",
+        "comment": "PREFACE: \nAUDIT-C is an assessment about alcohol consumption, focused on harmful, rather than typical, drinking behaviour. In Release 2, the Data Dictionary carries the Audit-C total score only. In future releases the parameters for AUDIT-C or the full AUDIT test can be added, if required.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "RiskAssessments.AUDITItem.AUDITCTotal",
+        "path": "RiskAssessments.AUDITItem.AUDITCTotal",
+        "label": "AUDITCTotal",
+        "short": "AUDIT-C total score",
+        "definition": "Total Score calculated from the first 3 AUDIT questions only.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Count"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

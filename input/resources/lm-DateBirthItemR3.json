@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-datebirthitemr3",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-datebirthitemr3",
+  "name": "DateBirthItemR3",
+  "title": "DateBirthItemR3",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "PCDQF-DD.Release1.ClinicalDemographicsR1.DateBirthItem",
+        "path": "DateBirthItemR3",
+        "label": "DateBirthItemR3",
+        "short": "Date of birth item R3",
+        "definition": "Details about a single date of birth.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.Demographics.DateBirth",
+        "path": "DateBirthItemR3.DateBirth",
+        "label": "DateBirth",
+        "short": "Date of birth",
+        "definition": "Date of birth for an individual.",
+        "alias": [
+          "DOB",
+          "Birthdate"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "fhir",
+            "map": "Patient.birthDate|"
+          }
+        ]
+      },
+      {
+        "id": "PCDQF-DD.Release1.ClinicalDemographicsR1.DateBirthItem.Source",
+        "path": "DateBirthItemR3.Source",
+        "label": "Source",
+        "short": "Source",
+        "definition": "Information about the original source of the date of birth.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.ClinicalDemographicsR1.DateBirthItem.AgreedDOB",
+        "path": "DateBirthItemR3.AgreedDOB",
+        "label": "AgreedDOB",
+        "short": "Agreed date of birth",
+        "definition": "Indication that this date of birth is regarded as the most accurate or correct, and used as the basis for official purposes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PCDQF-DD.Release1.ClinicalDemographicsR1.DateBirthItem.??Comment",
+        "path": "DateBirthItemR3.Comment",
+        "label": "Comment",
+        "short": "Comment",
+        "definition": "Additional narrative about this date of birth not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-medications",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-medications",
+  "name": "Medications",
+  "title": "Medications",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Medicines",
+        "path": "Medications",
+        "label": "Medications",
+        "short": "Medications",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicines.MedicineItem",
+        "path": "Medications.MedicationStatementItem",
+        "label": "MedicationStatementItem",
+        "short": "Medication statement item",
+        "definition": "A snapshot view about the use of a specified medication by an individual.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medications.MedicationStatementItem.ClinicalStatus",
+        "path": "Medications.MedicationStatementItem.ClinicalStatus",
+        "label": "ClinicalStatus",
+        "short": "Clinical status",
+        "definition": "The status of medication use.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineStatementItem.MedicationName",
+        "path": "Medications.MedicationStatementItem.MedicationName",
+        "label": "MedicationName",
+        "short": "Medication name",
+        "definition": "Name of the medication or therapeutic item.",
+        "alias": [
+          "Medicine name",
+          "Drug name",
+          "Therapeutic name"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineStatementItem.MedicationName.[Preparation]",
+        "path": "Medications.MedicationStatementItem.[MedicationItem]",
+        "label": "[MedicationItem]",
+        "short": "[Medication item]",
+        "definition": "Structured details about the Medication.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineStatementItem.RouteOfAdministration",
+        "path": "Medications.MedicationStatementItem.Route",
+        "label": "Route",
+        "short": "Route",
+        "definition": "The way the medication is administered to the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medications.DirectionItem.DoseAmount",
+        "path": "Medications.MedicationStatementItem.DoseAmountDescription",
+        "label": "DoseAmountDescription",
+        "short": "Dose amount description",
+        "definition": "Narrative description about the amount of medication.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.DirectionItem.Frequency",
+        "path": "Medications.MedicationStatementItem.DoseTimingDescription",
+        "label": "DoseTimingDescription",
+        "short": "Dose timing description",
+        "definition": "Narrative description about the timing of medication administration.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineStatementItem.Instructions",
+        "path": "Medications.MedicationStatementItem.Instruction",
+        "label": "Instruction",
+        "short": "Instruction",
+        "definition": "Additional information on how to use or store the Medication.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineStatementItem.ClinicalIndication",
+        "path": "Medications.MedicationStatementItem.ClinicalIndication",
+        "label": "ClinicalIndication",
+        "short": "Clinical indication",
+        "definition": "Clinical reason for use of the medication or therapeutic item.",
+        "alias": [
+          "Reason for medication",
+          "Reason for prescription"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineStatementItem.Comment",
+        "path": "Medications.MedicationStatementItem.Comment",
+        "label": "Comment",
+        "short": "Comment",
+        "definition": "Additional narrative about the medication statement not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.PreparationItem",
+        "path": "Medications.MedicationItem",
+        "label": "MedicationItem",
+        "short": "Medication item",
+        "definition": "A single medication, ingredient, or substance.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.PreparationItem.PreparationName",
+        "path": "Medications.MedicationItem.MedicationName",
+        "label": "MedicationName",
+        "short": "Medication name",
+        "definition": "The name of the medication, medication component or ingredient.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medications.MedicationItem.Form",
+        "path": "Medications.MedicationItem.Form",
+        "label": "Form",
+        "short": "Form",
+        "definition": "The formulation or presentation of the medication or medication component.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medications.MedicationItem.Strength",
+        "path": "Medications.MedicationItem.StrengthDescription",
+        "label": "StrengthDescription",
+        "short": "Strength description",
+        "definition": "Narrative description of medication strength.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicines.MedicineExclusionItem",
+        "path": "Medications.MedicationExclusionItemR1",
+        "label": "MedicationExclusionItemR1",
+        "short": "Medication exclusion item R1",
+        "definition": "A positive statement about no known use of Medications, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineExclusionItem.MedicationExclusionStatement",
+        "path": "Medications.MedicationExclusionItemR1.MedicationExclusionStatement",
+        "label": "MedicationExclusionStatement",
+        "short": "Medication exclusion statement",
+        "definition": "Positive statement that medication use is excluded.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicationAbsenceItem",
+        "path": "Medications.MedicationAbsenceItemR1",
+        "label": "MedicationAbsenceItemR1",
+        "short": "Medication absence item R1",
+        "definition": "A positive statement of absence of information about known use of Medications, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicationAbsenceItem.MedicationAbsenceStatement",
+        "path": "Medications.MedicationAbsenceItemR1.MedicationAbsenceStatement",
+        "label": "MedicationAbsenceStatement",
+        "short": "Medication absence statement",
+        "definition": "Positive statement that no information is available about medication use.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

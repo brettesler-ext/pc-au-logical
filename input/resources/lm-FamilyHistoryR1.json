@@ -1,0 +1,135 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "lm-familyhistoryr1",
+  "url": "http://aehrc.com/fhir/StructureDefinition/lm-familyhistoryr1",
+  "name": "FamilyHistoryR1",
+  "title": "FamilyHistoryR1",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "FamilyHistoryR1",
+        "path": "FamilyHistoryR1",
+        "label": "FamilyHistoryR1",
+        "short": "Family history R1",
+        "definition": "No description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "FamilyHistoryR1.FamilyHistorySummaryItemR1",
+        "path": "FamilyHistoryR1.FamilyHistorySummaryItemR1",
+        "label": "FamilyHistorySummaryItemR1",
+        "short": "Family history summary item R1",
+        "definition": "A summary of significant health and related issues in family members.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "FamilyHistoryR1.FamilyHistorySummaryItemR1.Summary",
+        "path": "FamilyHistoryR1.FamilyHistorySummaryItemR1.Overview",
+        "label": "Overview",
+        "short": "Overview",
+        "definition": "Narrative summary about problems, diagnoses, psychosocial, environmental and genetic markers that have been identified in family members.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+        "path": "FamilyHistoryR1.FamilyHistorySummaryItemR1.LastUpdated",
+        "label": "LastUpdated",
+        "short": "Last updated",
+        "definition": "The date this family history summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicines.MedicineExclusionItem",
+        "path": "FamilyHistoryR1.FamilyHistoryExclusionItemR1",
+        "label": "FamilyHistoryExclusionItemR1",
+        "short": "Family history exclusion item R1",
+        "definition": "A positive statement about no known past family history, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicineExclusionItem.MedicationExclusionStatement",
+        "path": "FamilyHistoryR1.FamilyHistoryExclusionItemR1.FamilyHistoryExclusionStatement",
+        "label": "FamilyHistoryExclusionStatement",
+        "short": "Family history exclusion statement",
+        "definition": "Positive statement that there is no known significant family history.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicationAbsenceItem",
+        "path": "FamilyHistoryR1.FamilyHistoryAbsenceItemR1",
+        "label": "FamilyHistoryAbsenceItemR1",
+        "short": "Family history absence item R1",
+        "definition": "A positive statement of absence of information about known family history, accurate only at the time of recording.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Heading"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Medicine.MedicationAbsenceItem.MedicationAbsenceStatement",
+        "path": "FamilyHistoryR1.FamilyHistoryAbsenceItemR1.FamilyHistoryAbsenceStatement",
+        "label": "FamilyHistoryAbsenceStatement",
+        "short": "Family history absence statement",
+        "definition": "Positive statement that no information is available about family history.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}
