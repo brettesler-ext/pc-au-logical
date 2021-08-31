@@ -15,8 +15,8 @@
     "differential": {
         "element": [
             {
-                "id": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem",
+                "id": "AdverseReactions.AdverseReactionRiskItem",
+                "path": "AdverseReactions.AdverseReactionRiskItem",
                 "label": "AdverseReactionRiskItem",
                 "short": "Adverse reaction risk item",
                 "definition": "Risk of harmful or undesirable physiological response which is unique to the individual and associated with exposure to a known substance.",
@@ -35,8 +35,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.SubstanceName",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.SubstanceName",
+                "id": "AdverseReactions.AdverseReactionRiskItem.SubstanceName",
+                "path": "AdverseReactions.AdverseReactionRiskItem.SubstanceName",
                 "label": "SubstanceName",
                 "short": "Substance name",
                 "definition": "Identification of a substance, or substance class, which is considered to put the individual at risk of an adverse reaction event.",
@@ -55,8 +55,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.Criticality",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.Criticality",
+                "id": "AdverseReactions.AdverseReactionRiskItem.Criticality",
+                "path": "AdverseReactions.AdverseReactionRiskItem.Criticality",
                 "label": "Criticality",
                 "short": "Criticality",
                 "definition": "Estimate of the potential clinical harm, or seriousness, from a future exposure to the identified substance.",
@@ -73,8 +73,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
+                "id": "AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
+                "path": "AdverseReactions.AdverseReactionRiskItem.VerificationStatus",
                 "label": "VerificationStatus",
                 "short": "Verification status",
                 "definition": "Assertion about certainty associated about the potential risk of a reaction to the identified substance.",
@@ -91,8 +91,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.Reaction",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.ReactionEvent",
+                "id": "AdverseReactions.AdverseReactionRiskItem.Reaction",
+                "path": "AdverseReactions.AdverseReactionRiskItem.ReactionEvent",
                 "label": "ReactionEvent",
                 "short": "Reaction event",
                 "definition": "Details about each adverse reaction event linked to exposure to the identified 'Substance'.",
@@ -106,8 +106,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.Manifestation",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.ReactionEvent.Manifestation",
+                "id": "Manifestation",
+                "path": "AdverseReactions.AdverseReactionRiskItem.ReactionEvent.Manifestation",
                 "label": "Manifestation",
                 "short": "Manifestation",
                 "definition": "Clinical symptom and/or sign that were observed or associated with the adverse reaction.",
@@ -125,8 +125,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.Comment",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.Comment",
+                "id": "AdverseReactions.AdverseReactionRiskItem.Comment",
+                "path": "AdverseReactions.AdverseReactionRiskItem.Comment",
                 "label": "Comment",
                 "short": "Comment",
                 "definition": "Additional narrative about the adverse reaction risk not captured in other fields.",
@@ -143,8 +143,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskItem.LastUpdated",
+                "id": "LifestyleRiskFactorsR1.TobaccoSmokingSummaryItemR1.LastUpdated",
+                "path": "AdverseReactions.AdverseReactionRiskItem.LastUpdated",
                 "label": "LastUpdated",
                 "short": "Last updated",
                 "definition": "The date this adverse reaction summary was last updated.",
@@ -158,8 +158,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.Medicines.MedicineExclusionItem",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskExclusionItemR1",
+                "id": "Medicines.MedicineExclusionItem",
+                "path": "AdverseReactions.AdverseReactionRiskExclusionItemR1",
                 "label": "AdverseReactionRiskExclusionItemR1",
                 "short": "Adverse reaction risk exclusion item R1",
                 "definition": "A positive statement about no known adverse reactions, accurate only at the time of recording.",
@@ -173,8 +173,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.Medicine.MedicineExclusionItem.MedicationExclusionStatement",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskExclusionItemR1.AdverseReactionRiskExclusionStatement",
+                "id": "Medicine.MedicineExclusionItem.MedicationExclusionStatement",
+                "path": "AdverseReactions.AdverseReactionRiskExclusionItemR1.AdverseReactionRiskExclusionStatement",
                 "label": "AdverseReactionRiskExclusionStatement",
                 "short": "Adverse reaction risk exclusion statement",
                 "definition": "Positive statement that there are no known adverse reactions for inclusion.",
@@ -188,8 +188,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.Medicine.AdverseReactionRiskAbsenceItem",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskAbsenceItemR1",
+                "id": "Medicine.AdverseReactionRiskAbsenceItem",
+                "path": "AdverseReactions.AdverseReactionRiskAbsenceItemR1",
                 "label": "AdverseReactionRiskAbsenceItemR1",
                 "short": "Adverse reaction risk absence item R1",
                 "definition": "A positive statement of absence of information about known adverse reaction risks, accurate only at the time of recording.",
@@ -203,8 +203,8 @@
                 "mustSupport": false
             },
             {
-                "id": "PCDQF-DD.Release1.Medicine.AdverseReactionRiskAbsenceItem.AdverseReactionRiskAbsenceStatement",
-                "path": "PCDQF-DD.Release1.AdverseReactions.AdverseReactionRiskAbsenceItemR1.AdverseReactionRiskAbsenceStatement",
+                "id": "Medicine.AdverseReactionRiskAbsenceItem.AdverseReactionRiskAbsenceStatement",
+                "path": "AdverseReactions.AdverseReactionRiskAbsenceItemR1.AdverseReactionRiskAbsenceStatement",
                 "label": "AdverseReactionRiskAbsenceStatement",
                 "short": "Adverse reaction risk absence statement",
                 "definition": "Positive statement that no information is available about adverse reaction risks.",
