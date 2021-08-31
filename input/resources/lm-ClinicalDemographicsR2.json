@@ -7,6 +7,9 @@
   "status": "active",
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
+  "type": "http://aehrc.com/fhir/StructureDefinition/lm-clinicaldemographicsr2",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
