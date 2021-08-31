@@ -15,6 +15,11 @@
     "differential": {
         "element": [
             {
+                "id": "AdverseReactions",
+                "path": "AdverseReactions",
+                "short": "AdverseReactions"
+              },
+            {
                 "id": "AdverseReactions.AdverseReactionRiskItem",
                 "path": "AdverseReactions.AdverseReactionRiskItem",
                 "label": "AdverseReactionRiskItem",
