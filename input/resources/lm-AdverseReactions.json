@@ -3,6 +3,15 @@
     "id": "lm-adversereactions",
     "url": "http://aehrc.com/fhir/StructureDefinition/lm-adversereactions",
     "name": "AdverseReactions",
+    "title": "Adverse Reactions",
+    "status": "active",
+    "description": "Adverse reactions",
+    "fhirVersion": "4.0.1",
+    "kind": "logical",
+  "abstract": false,
+  "type": "http://example.org/fhir/fish/StructureDefinition/AdverseReactions",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
     "differential": {
         "element": [
             {
