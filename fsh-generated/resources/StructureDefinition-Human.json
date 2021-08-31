@@ -1,0 +1,133 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Human",
+  "url": "http://example.org/fhir/fish/StructureDefinition/Human",
+  "version": "0.1.0",
+  "name": "Human",
+  "title": "Human Being TEST",
+  "status": "active",
+  "description": "A member of the Homo sapien species.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "name": "RIM Mapping",
+      "uri": "http://hl7.org/v3"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://example.org/fhir/fish/StructureDefinition/Human",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Human",
+        "path": "Human",
+        "short": "Human Being TEST",
+        "definition": "A member of the Homo sapien species."
+      },
+      {
+        "id": "Human.name",
+        "path": "Human.name",
+        "short": "Name(s) of the human",
+        "definition": "The names by which the human is or has been known",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "HumanName"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Human.birthDate",
+        "path": "Human.birthDate",
+        "short": "The date of birth, if known",
+        "definition": "The date on which the person was born. Approximations may be used if exact date is unknown.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Human.deceased[x]",
+        "path": "Human.deceased[x]",
+        "short": "Indication if the human is deceased",
+        "definition": "An indication if the human has died. Boolean should not be used if date or age at death are known.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Age"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Human.family",
+        "path": "Human.family",
+        "short": "Family",
+        "definition": "Members of the human's immediate family.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Human.family.mother",
+        "path": "Human.family.mother",
+        "short": "Mother",
+        "definition": "Biological mother, current adoptive mother, or both.",
+        "min": 0,
+        "max": "2",
+        "type": [
+          {
+            "code": "http://example.org/fhir/fish/StructureDefinition/FamilyMember"
+          }
+        ]
+      },
+      {
+        "id": "Human.family.father",
+        "path": "Human.family.father",
+        "short": "Father",
+        "definition": "Biological father, current adoptive father, or both.",
+        "min": 0,
+        "max": "2",
+        "type": [
+          {
+            "code": "http://example.org/fhir/fish/StructureDefinition/FamilyMember"
+          }
+        ]
+      },
+      {
+        "id": "Human.family.sibling",
+        "path": "Human.family.sibling",
+        "short": "Sibling",
+        "definition": "Other children of the human's mother and/or father.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "http://example.org/fhir/fish/StructureDefinition/FamilyMember"
+          }
+        ]
+      }
+    ]
+  }
+}

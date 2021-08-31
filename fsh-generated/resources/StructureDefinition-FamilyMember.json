@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "FamilyMember",
+  "url": "http://example.org/fhir/fish/StructureDefinition/FamilyMember",
+  "version": "0.1.0",
+  "name": "FamilyMember",
+  "title": "Family Member",
+  "status": "active",
+  "description": "A reference to a human's family member.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "name": "RIM Mapping",
+      "uri": "http://hl7.org/v3"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://example.org/fhir/fish/StructureDefinition/FamilyMember",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "FamilyMember",
+        "path": "FamilyMember",
+        "short": "Family Member",
+        "definition": "A reference to a human's family member."
+      },
+      {
+        "id": "FamilyMember.human",
+        "path": "FamilyMember.human",
+        "short": "Family member",
+        "definition": "A reference to the human family member",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://example.org/fhir/fish/StructureDefinition/Human"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "FamilyMember.biological",
+        "path": "FamilyMember.biological",
+        "short": "Biologically related?",
+        "definition": "A family member may not be biologically related due to adoption, blended families, etc.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}
