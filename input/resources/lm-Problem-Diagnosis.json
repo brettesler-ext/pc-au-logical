@@ -8,7 +8,7 @@
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
-  "type": "http://aehrc.com/fhir/StructureDefinition/lm-problem/diagnosis",
+  "type": "http://aehrc.com/fhir/StructureDefinition/Problem-Diagnosis",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {

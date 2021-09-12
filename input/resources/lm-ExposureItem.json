@@ -8,10 +8,10 @@
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
-  "type": "http://aehrc.com/fhir/StructureDefinition/lm-exposureitem",
+  "type": "http://aehrc.com/fhir/StructureDefinition/ExposureItem",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
-  "differential": { 
+  "differential": {
     "element": [
       {
         "id": "PCDQF-DD.FutureRelease.ExposureItem",

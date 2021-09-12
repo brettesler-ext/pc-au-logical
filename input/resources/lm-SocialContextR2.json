@@ -8,7 +8,7 @@
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
-  "type": "http://aehrc.com/fhir/StructureDefinition/lm-socialcontextr2",
+  "type": "http://aehrc.com/fhir/StructureDefinition/SocialContextR2",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
