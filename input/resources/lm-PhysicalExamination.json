@@ -62,7 +62,7 @@
         "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.ExaminationDetail",
         "path": "PhysicalExamination.PhysicalExaminationFindingsItem.ExaminationDetail",
         "label": "ExaminationDetail",
-        "short": "[Examination detail]",
+        "short": "Examination Detail",
         "definition": "Specific structured details of the physical examination findings.",
         "min": 0,
         "max": "*",
@@ -155,10 +155,10 @@
         "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.ExaminationDetail",
         "path": "PhysicalExamination.ExaminationBothEyesItem.ExaminationDetail",
         "label": "ExaminationDetail",
-        "short": "[Examination detail]",
+        "short": "Examination Detail",
         "definition": "Structured details of the physical examination findings of both eyes.",
         "comment": "Detailed clinical findings will be recorded as specific examination items which can be nested within this data element to represent the fractal nature of clinical examination and allow for variation in clinician's requirements for examination documentation.",
-        "min": 0,
+        "min": 0, 
         "max": "1",
         "type": [
           {
