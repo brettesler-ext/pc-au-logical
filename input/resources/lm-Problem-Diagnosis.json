@@ -5,7 +5,7 @@
   "name": "Problem-Diagnosis",
   "title": "Problem-Diagnosis",
   "status": "active",
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "4.0.1", 
   "kind": "logical",
   "abstract": false,
   "type": "http://aehrc.com/fhir/StructureDefinition/Problem-Diagnosis",
