@@ -85,7 +85,7 @@
         "short": "Medication item",
         "definition": "Structured details about the Medication.",
         "min": 0,
-        "max": "*",
+        "max": "*", 
         "type": [
           {
             "code": "Reference",
