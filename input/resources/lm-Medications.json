@@ -79,10 +79,10 @@
         "mustSupport": false
       },
       {
-        "id": "Medicine.MedicineStatementItem.MedicationName.[Preparation]",
-        "path": "Medications.MedicationStatementItem.[MedicationItem]",
-        "label": "[MedicationItem]",
-        "short": "[Medication item]",
+        "id": "Medicine.MedicineStatementItem.MedicationName.Preparation",
+        "path": "Medications.MedicationStatementItem.MedicationItem",
+        "label": "MedicationItem",
+        "short": "Medication item",
         "definition": "Structured details about the Medication.",
         "min": 0,
         "max": "*",
