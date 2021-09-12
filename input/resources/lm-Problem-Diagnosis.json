@@ -110,10 +110,10 @@
         "mustSupport": false
       },
       {
-        "id": "Problem-Diagnosis.ProblemDiagnosisItem.[AnatomicalLocationItem]",
-        "path": "Problem-Diagnosis.ProblemDiagnosisItem.[AnatomicalLocationItem]",
-        "label": "[AnatomicalLocationItem]",
-        "short": "[Anatomical location item]",
+        "id": "Problem-Diagnosis.ProblemDiagnosisItem.AnatomicalLocationItem",
+        "path": "Problem-Diagnosis.ProblemDiagnosisItem.AnatomicalLocationItem",
+        "label": "AnatomicalLocationItem",
+        "short": "Anatomical location item",
         "definition": "Specific structured details about a single anatomical location.",
         "min": 0,
         "max": "*",
