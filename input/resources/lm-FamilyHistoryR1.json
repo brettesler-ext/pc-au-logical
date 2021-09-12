@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "FamilyHistoryR1",
+  "id": "lm-familyhistoryr1",
   "url": "http://aehrc.com/fhir/StructureDefinition/lm-familyhistoryr1",
   "name": "FamilyHistoryR1",
   "title": "FamilyHistoryR1",
@@ -8,7 +8,7 @@
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
-  "type": "http://aehrc.com/fhir/StructureDefinition/lm-familyhistoryr1",
+  "type": "http://aehrc.com/fhir/StructureDefinition/FamilyHistoryR1",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
