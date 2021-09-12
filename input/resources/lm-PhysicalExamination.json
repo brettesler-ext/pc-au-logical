@@ -59,9 +59,9 @@
         "mustSupport": false
       },
       {
-        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.[ExaminationDetail]",
-        "path": "PhysicalExamination.PhysicalExaminationFindingsItem.[ExaminationDetail]",
-        "label": "[ExaminationDetail]",
+        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.ExaminationDetail",
+        "path": "PhysicalExamination.PhysicalExaminationFindingsItem.ExaminationDetail",
+        "label": "ExaminationDetail",
         "short": "[Examination detail]",
         "definition": "Specific structured details of the physical examination findings.",
         "min": 0,
@@ -107,7 +107,7 @@
         "mustSupport": false
       },
       {
-        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.[ExaminationDetail]",
+        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.ExaminationDetail",
         "path": "PhysicalExamination.ExaminationHeartItem.HeartSoundsDescription",
         "label": "HeartSoundsDescription",
         "short": "Heart sounds description",
@@ -152,9 +152,9 @@
         "mustSupport": false
       },
       {
-        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.[ExaminationDetail]",
-        "path": "PhysicalExamination.ExaminationBothEyesItem.[ExaminationDetail]",
-        "label": "[ExaminationDetail]",
+        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.ExaminationDetail",
+        "path": "PhysicalExamination.ExaminationBothEyesItem.ExaminationDetail",
+        "label": "ExaminationDetail",
         "short": "[Examination detail]",
         "definition": "Structured details of the physical examination findings of both eyes.",
         "comment": "Detailed clinical findings will be recorded as specific examination items which can be nested within this data element to represent the fractal nature of clinical examination and allow for variation in clinician's requirements for examination documentation.",
@@ -291,7 +291,7 @@
         "mustSupport": false
       },
       {
-        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.[ExaminationDetail]",
+        "id": "PhysicalExamination.PhysicalExaminationFindingsItem.Description.ExaminationDetail",
         "path": "PhysicalExamination.ExaminationMouthItem.DentitionDescription",
         "label": "DentitionDescription",
         "short": "Dentition description",
