@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "lm-familyhistoryr1",
+  "id": "FamilyHistoryR1",
   "url": "http://aehrc.com/fhir/StructureDefinition/lm-familyhistoryr1",
   "name": "FamilyHistoryR1",
   "title": "FamilyHistoryR1",
