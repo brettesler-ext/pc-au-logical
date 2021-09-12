@@ -17,7 +17,7 @@
         "id": "Demographics",
         "path": "ClinicalDemographicsR1",
         "label": "ClinicalDemographicsR1",
-        "short": "Clinical demographics R1",
+        "short": "ClinicaldemographicsR1",
         "definition": "No description",
         "min": 0,
         "max": "1",
@@ -32,7 +32,7 @@
         "id": "Demographics.PersonDetailsItem",
         "path": "ClinicalDemographicsR1.PersonDetailsItem",
         "label": "PersonDetailsItem",
-        "short": "Person details item",
+        "short": "Persondetailsitem",
         "definition": "Details about a single individual.",
         "alias": [
           "Subject of care",
@@ -52,7 +52,7 @@
         "id": "Demographics.PersonName",
         "path": "ClinicalDemographicsR1.PersonDetailsItem.PersonName",
         "label": "PersonName",
-        "short": "Person name",
+        "short": "Personname",
         "definition": "The structured name of an individual.",
         "alias": [
           "Patient name",
@@ -73,7 +73,7 @@
         "id": "ClinicalDemographicsR1.PersonDetailsItem.IndigenousStatus",
         "path": "ClinicalDemographicsR1.PersonDetailsItem.IndigenousStatus",
         "label": "IndigenousStatus",
-        "short": "Indigenous status",
+        "short": "Indigenousstatus",
         "definition": "Aboriginal or Torres Strait Islander origin status for the individual, usually self-identified.",
         "alias": [
           "Aboriginal and/or Torres Strait Islander status",
@@ -97,7 +97,7 @@
         "id": "ClinicalDemographicsR1.DateBirthItem",
         "path": "ClinicalDemographicsR1.DateBirthItemR1",
         "label": "DateBirthItemR1",
-        "short": "Date of birth item R1",
+        "short": "DateofbirthitemR1",
         "definition": "Details about a single date of birth.",
         "min": 0,
         "max": "*",
@@ -112,7 +112,7 @@
         "id": "Demographics.DateBirth",
         "path": "ClinicalDemographicsR1.DateBirthItemR1.DateBirth",
         "label": "DateBirth",
-        "short": "Date of birth",
+        "short": "Dateofbirth",
         "definition": "The date on which an individual was born.",
         "alias": [
           "DOB",

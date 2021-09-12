@@ -32,7 +32,7 @@
         "id": "Encounter.EncounterItem",
         "path": "Compositions.EncounterItem",
         "label": "EncounterItem",
-        "short": "Encounter item",
+        "short": "Encounteritem",
         "definition": "Detailed information about a single clinical interaction, visit or care event between an individual and one or more healthcare providers.",
         "min": 0,
         "max": "*",
@@ -47,7 +47,7 @@
         "id": "Encounter.TypeEncounter",
         "path": "Compositions.EncounterItem.ModeParticipation",
         "label": "ModeParticipation",
-        "short": "Mode of participation",
+        "short": "Modeofparticipation",
         "definition": "The manner in which a clinical care activity, interaction or visit event was carried out.",
         "min": 0,
         "max": "1",
@@ -62,7 +62,7 @@
         "id": "AdverseReactions.AdverseReactionList",
         "path": "Compositions.AdverseReactionRiskListItem",
         "label": "AdverseReactionRiskListItem",
-        "short": "Adverse reaction risk list item",
+        "short": "Adversereactionrisklistitem",
         "definition": "A list of substances which, on administration or during exposure, may put the individual at risk of an adverse reaction.",
         "alias": [
           "Allergy list",
@@ -81,7 +81,7 @@
         "id": "ProblemList.ProblemListItem",
         "path": "Compositions.ProblemListItem",
         "label": "ProblemListItem",
-        "short": "Problem list item",
+        "short": "Problemlistitem",
         "definition": "A combined representation of significant problems, diagnoses and procedures for the individual.",
         "alias": [
           "Medical history",
@@ -101,7 +101,7 @@
         "id": "Medicines.MedicinesList",
         "path": "Compositions.MedicationListItem",
         "label": "MedicationListItem",
-        "short": "Medication list item",
+        "short": "Medicationlistitem",
         "definition": "A list of medications being used by the individual.",
         "alias": [
           "Medicines list"
@@ -119,7 +119,7 @@
         "id": "Compositions.VaccinationList",
         "path": "Compositions.VaccinationListItem",
         "label": "VaccinationListItem",
-        "short": "Vaccination list item",
+        "short": "Vaccinationlistitem",
         "definition": "A list of vaccines that have been administered to an individual.",
         "alias": [
           "Immunisation list"
@@ -137,7 +137,7 @@
         "id": "Compositions.FamilyHistoryList",
         "path": "Compositions.FamilyHistoryListItem",
         "label": "FamilyHistoryListItem",
-        "short": "Family history list item",
+        "short": "Familyhistorylistitem",
         "definition": "A list of significant health and related issues in family members.",
         "alias": [
           "Immunisation list"
@@ -155,7 +155,7 @@
         "id": "Compositions.FamilyHistoryList",
         "path": "Compositions.CarePlanItem",
         "label": "CarePlanItem",
-        "short": "Care plan item",
+        "short": "Careplanitem",
         "definition": "A collection of planned, active or completed activities or orders, goals/objectives and targets.",
         "alias": [
           "Follow-up list"

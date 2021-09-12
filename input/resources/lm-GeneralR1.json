@@ -17,7 +17,7 @@
         "id": "Encounter",
         "path": "GeneralR1",
         "label": "GeneralR1",
-        "short": "General R1",
+        "short": "GeneralR1",
         "definition": "No description",
         "min": 0,
         "max": "1",
@@ -32,7 +32,7 @@
         "id": "Encounter.ClinicalSynopsis",
         "path": "GeneralR1.ClinicalSynopsisItem",
         "label": "ClinicalSynopsisItem",
-        "short": "Clinical synopsis item",
+        "short": "Clinicalsynopsisitem",
         "definition": "Narrative summary or overview about a patient and their health situation, from the perspective of a healthcare provider",
         "min": 0,
         "max": "*",
@@ -59,10 +59,10 @@
         "mustSupport": false
       },
       {
-        "id": "Problem/Diagnosis.AnatomicalLocationItem",
+        "id": "Problem-Diagnosis.AnatomicalLocationItem",
         "path": "GeneralR1.AnatomicalLocationItem",
         "label": "AnatomicalLocationItem",
-        "short": "Anatomical location item",
+        "short": "Anatomicallocationitem",
         "definition": "A single physical site on or within the human body.",
         "min": 0,
         "max": "*",
@@ -74,10 +74,10 @@
         "mustSupport": false
       },
       {
-        "id": "Problem/Diagnosis.AnatomicalLocationItem.BodySiteName",
+        "id": "Problem-Diagnosis.AnatomicalLocationItem.BodySiteName",
         "path": "GeneralR1.AnatomicalLocationItem.BodySiteName",
         "label": "BodySiteName",
-        "short": "Body site name",
+        "short": "Bodysitename",
         "definition": "Identification of a single physical site either on, or within, the human body.",
         "min": 0,
         "max": "1",
@@ -89,7 +89,7 @@
         "mustSupport": false
       },
       {
-        "id": "Problem/Diagnosis.ProblemDiagnosisItem.Laterality",
+        "id": "Problem-Diagnosis.ProblemDiagnosisItem.Laterality",
         "path": "GeneralR1.AnatomicalLocationItem.Laterality",
         "label": "Laterality",
         "short": "Laterality",
